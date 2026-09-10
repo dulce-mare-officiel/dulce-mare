@@ -34,7 +34,7 @@
 
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  #top, #vente, #services, #destinations, #contact, #flotte{
+  #top, #vente, #services, #destinations, #contact, #flotte, #histoire{
     scroll-margin-top:110px;
   }
   body{
@@ -643,6 +643,70 @@
   @media (max-width:600px){
     .legal-modal{padding:40px 24px 44px;}
   }
+
+  /* ---------- histoire / about ---------- */
+  .histoire{
+    background:var(--navy-950);
+    padding:120px 0;
+    color:var(--text-on-navy);
+  }
+  .histoire .section-head h2{color:#fff;max-width:20ch;}
+  .histoire .section-head p{color:rgba(223,230,238,0.72);}
+  .histoire-lead{
+    max-width:74ch;
+    color:rgba(223,230,238,0.82);
+    font-size:1.02rem;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-bottom:64px;
+  }
+  .founders-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.1);
+    margin-bottom:56px;
+  }
+  .founder-card{
+    background:var(--navy-950);
+    padding:36px 28px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .founder-mark{
+    width:46px;height:46px;
+    border-radius:50%;
+    border:1px solid var(--brass);
+    color:var(--brass-light);
+    font-family:'Playfair Display',serif;
+    font-size:1.1rem;
+    font-weight:600;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .founder-card h3{color:#fff;font-size:1.1rem;}
+  .founder-card .role{
+    color:var(--brass-light);
+    font-size:0.76rem;
+    letter-spacing:0.6px;
+    text-transform:uppercase;
+    margin-top:-8px;
+  }
+  .founder-card p{color:rgba(223,230,238,0.72);font-size:0.9rem;}
+  .histoire-close{
+    max-width:74ch;
+    color:rgba(223,230,238,0.82);
+    font-size:1.02rem;
+  }
+  @media (max-width:1080px){
+    .founders-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:880px){
+    .founders-grid{grid-template-columns:1fr;}
+  }
+
   @media (max-width:1080px){
     .fleet-grid{grid-template-columns:repeat(2,1fr);}
     .services-grid{grid-template-columns:repeat(2,1fr);}
@@ -720,6 +784,7 @@
       <a href="#vente">Vente</a>
       <a href="#services">Services</a>
       <a href="#destinations">Destinations</a>
+      <a href="#histoire">Notre histoire</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -963,6 +1028,54 @@
 </section>
 
 <!-- ================= TESTIMONIALS ================= -->
+<!-- ================= HISTOIRE / À PROPOS ================= -->
+<section class="histoire" id="histoire">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="kicker on-navy">NOTRE HISTOIRE</span>
+        <h2>Un héritage de charpentier de marine, quatre amis d'enfance</h2>
+      </div>
+      <p>Depuis le début des années 2010, entre savoir-faire traditionnel et exigence contemporaine.</p>
+    </div>
+
+    <div class="histoire-lead">
+      <p>Fondée au début des années 2010, Dulce Mare est née de l'association de quatre amis d'enfance aux compétences complémentaires : Oscar Pounepe, Théo Durand, Nacer Bouda et Gabriel Ridony.</p>
+      <p>Le véritable point de départ de l'aventure vient de l'histoire familiale d'Oscar. Son arrière-grand-père était maître charpentier de marine sur la Côte d'Azur. Dans les années 1930, il restaurait les voiliers en bois appartenant à une clientèle fortunée. Il a transmis à sa famille un savoir-faire traditionnel fondé sur le travail du bois, les techniques de construction navale et le respect des formes et des lignes des bateaux.</p>
+      <p>C'est autour de cet héritage familial que les quatre amis construisent leur projet.</p>
+    </div>
+
+    <div class="founders-grid">
+      <div class="founder-card">
+        <span class="founder-mark">OP</span>
+        <h3>Oscar Pounepe</h3>
+        <span class="role">Savoir-faire &amp; restauration</span>
+        <p>Garant du savoir-faire traditionnel, il supervise la restauration et les finitions sur mesure.</p>
+      </div>
+      <div class="founder-card">
+        <span class="founder-mark">TD</span>
+        <h3>Théo Durand</h3>
+        <span class="role">Architecture navale</span>
+        <p>Ingénieur en architecture navale, il associe les techniques modernes aux lignes classiques des bateaux et développe notamment des solutions de motorisation hybride.</p>
+      </div>
+      <div class="founder-card">
+        <span class="founder-mark">NB</span>
+        <h3>Nacer Bouda</h3>
+        <span class="role">Vente &amp; haute plaisance</span>
+        <p>Spécialiste de la négociation et de la haute plaisance internationale, il prend en charge la vente de bateaux d'exception.</p>
+      </div>
+      <div class="founder-card">
+        <span class="founder-mark">GR</span>
+        <h3>Gabriel Ridony</h3>
+        <span class="role">Design &amp; opérations</span>
+        <p>Designer d'intérieur et directeur des opérations, il imagine des espaces intérieurs sur mesure inspirés des grands hôtels de luxe et supervise l'activité de location.</p>
+      </div>
+    </div>
+
+    <p class="histoire-close">Aujourd'hui, Dulce Mare propose la location de navires d'exception avec équipage privé, ainsi que la vente et la location de bateaux de luxe restaurés ou construits sur mesure. L'entreprise associe l'élégance et le savoir-faire de l'ébénisterie marine traditionnelle aux technologies navales modernes, afin de créer des bateaux uniques, à la fois authentiques, confortables et performants.</p>
+  </div>
+</section>
+
 <section class="testimonials">
   <div class="wrap testi-grid">
     <div class="testi">
@@ -1039,6 +1152,7 @@
           <li><a href="#location">Location</a></li>
           <li><a href="#vente">Vente</a></li>
           <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#histoire">Notre histoire</a></li>
         </ul>
       </div>
       <div class="footer-col">

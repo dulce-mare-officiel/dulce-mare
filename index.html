@@ -117,7 +117,6 @@
     background:rgba(7,26,48,0.96);
     padding:14px 0;
     box-shadow:0 6px 24px rgba(4,14,28,0.25);
-    backdrop-filter:blur(6px);
   }
   header, header a, header .brand-name{color:var(--ivory);}
   nav.primary-nav{display:flex;align-items:center;gap:38px;}
@@ -714,6 +713,16 @@
       <span class="brand-sub">CÔTE D'AZUR</span>
     </a>
 
+    <div class="nav-backdrop" id="navBackdrop"></div>
+    <nav class="primary-nav" id="primaryNav">
+      <button class="nav-close" id="navClose" aria-label="Fermer le menu">&times;</button>
+      <a href="#location">Location</a>
+      <a href="#vente">Vente</a>
+      <a href="#services">Services</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
     <div style="display:flex;align-items:center;gap:18px;">
       <a href="#contact" class="btn btn-outline header-cta">Demander un devis</a>
       <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -722,16 +731,6 @@
     </div>
   </div>
 </header>
-
-<div class="nav-backdrop" id="navBackdrop"></div>
-<nav class="primary-nav" id="primaryNav">
-  <button class="nav-close" id="navClose" aria-label="Fermer le menu">&times;</button>
-  <a href="#location">Location</a>
-  <a href="#vente">Vente</a>
-  <a href="#services">Services</a>
-  <a href="#destinations">Destinations</a>
-  <a href="#contact">Contact</a>
-</nav>
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
